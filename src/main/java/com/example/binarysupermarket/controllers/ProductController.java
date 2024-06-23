@@ -3,7 +3,7 @@ package com.example.binarysupermarket.controllers;
 import com.example.binarysupermarket.dtos.CreateOrUpdateProductDTO;
 import com.example.binarysupermarket.payload.ApiResponse;
 import com.example.binarysupermarket.services.IProductService;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

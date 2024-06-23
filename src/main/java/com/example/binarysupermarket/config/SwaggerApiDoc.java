@@ -1,6 +1,6 @@
 package com.example.binarysupermarket.config;
 
-import jakarta.servlet.ServletContext;
+import javax.servlet.ServletContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

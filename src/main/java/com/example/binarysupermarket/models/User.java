@@ -2,8 +2,8 @@ package com.example.binarysupermarket.models;
 
 import com.example.binarysupermarket.enums.ERole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,8 +26,6 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", columnDefinition = "BINARY(16)")
-    @Type(type = "uuid-binary")
     private UUID id;
 
     @Column(name = "first_name")
@@ -49,29 +47,29 @@ public class User {
     private String password;
 
     // Constructors
-    public User(String firstName, String phoneNumber, String email) {
+    public User(String firstName, String phone, String email) {
         this.firstName = firstName;
-        this.phone = phoneNumber;
+        this.phone = phone;
         this.email = email;
     }
 
-    public User(String firstName, String phoneNumber, String email, ERole role) {
+    public User(String firstName, String phone, String email, ERole role) {
         this.firstName = firstName;
-        this.phone = phoneNumber;
+        this.phone = phone;
         this.email = email;
         this.role = role;
     }
 
-    public User(String firstName, String phoneNumber, String email, String password) {
+    public User(String firstName, String phone, String email, String password) {
         this.firstName = firstName;
-        this.phone = phoneNumber;
+        this.phone = phone;
         this.email = email;
         this.password = password;
     }
 
-    public User(String firstName, String phoneNumber, String email, String password, ERole role) {
+    public User(String firstName, String phone, String email, String password, ERole role) {
         this.firstName = firstName;
-        this.phone = phoneNumber;
+        this.phone = phone;
         this.email = email;
         this.password = password;
         this.role = role;

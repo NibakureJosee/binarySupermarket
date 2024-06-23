@@ -3,7 +3,7 @@ package com.example.binarysupermarket.models;
 import com.example.binarysupermarket.audits.TimestampAudit;
 import com.example.binarysupermarket.dtos.NewProductQuantityDTO;
 import com.example.binarysupermarket.enums.EProductQuantityOperation;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

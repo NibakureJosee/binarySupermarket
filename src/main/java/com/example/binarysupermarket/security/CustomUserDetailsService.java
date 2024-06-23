@@ -3,7 +3,7 @@ package com.example.binarysupermarket.security;
 import com.example.binarysupermarket.exceptions.BadRequestException;
 import com.example.binarysupermarket.models.User;
 import com.example.binarysupermarket.repositories.IUserRepository;
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

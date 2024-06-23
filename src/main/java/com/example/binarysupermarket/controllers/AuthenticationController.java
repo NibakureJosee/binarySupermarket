@@ -4,7 +4,7 @@ import com.example.binarysupermarket.dtos.SignInDTO;
 import com.example.binarysupermarket.payload.ApiResponse;
 import com.example.binarysupermarket.payload.JWTAuthenticationResponse;
 import com.example.binarysupermarket.security.JwtTokenProvider;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

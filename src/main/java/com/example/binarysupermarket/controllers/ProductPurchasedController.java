@@ -4,7 +4,7 @@ import com.example.binarysupermarket.dtos.PurchaseProductDTO;
 import com.example.binarysupermarket.payload.ApiResponse;
 import com.example.binarysupermarket.services.IProductPurchasedService;
 import com.example.binarysupermarket.utils.Constants;
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

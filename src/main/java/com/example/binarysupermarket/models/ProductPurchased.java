@@ -1,26 +1,25 @@
 package com.example.binarysupermarket.models;
 
 import com.example.binarysupermarket.audits.TimestampAudit;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import javax.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "product_purchased")
+
 public class ProductPurchased extends TimestampAudit {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", columnDefinition = "BINARY(16)")
-    @Type(type="uuid-binary")
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Assuming MySQL or similar
     private UUID id;
 
     @OneToOne
@@ -31,7 +30,7 @@ public class ProductPurchased extends TimestampAudit {
     @JoinColumn(name = "customer_id")
     private User customer;
 
-    @Column
+    @Column(name = "total")
     private Double total;
 
     public ProductPurchased(ProductQuantity productQuantity, User customer) {
